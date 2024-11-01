@@ -11,9 +11,9 @@ from google.appengine.api import datastore
 from google.appengine.api.datastore_types import EmbeddedEntity
 from google.appengine.datastore import entity_bytes_pb2 as entity_pb2
 
-from converter import records
-from converter.exceptions import BaseError, ValidationError
-from converter.utils import embedded_entity_to_dict, get_dest_dict, serialize_json
+from lib.firestore_export_json.converter import records
+from lib.firestore_export_json.converter.exceptions import BaseError, ValidationError
+from lib.firestore_export_json.converter.utils import embedded_entity_to_dict, get_dest_dict, serialize_json
 
 num_files: Value = Value("i", 0)
 num_files_processed: Value = Value("i", 0)
